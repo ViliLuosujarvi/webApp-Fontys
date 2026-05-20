@@ -1,3 +1,9 @@
+# ----------------------------------------------------------------
+# This file is still in progress and it's purpose is to serve
+# as mock connection between the database and the web application 
+# ----------------------------------------------------------------
+
+
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 
