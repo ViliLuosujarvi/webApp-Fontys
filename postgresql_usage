@@ -1,0 +1,31 @@
+1: Installation as usual, mind the linux distro:
+	https://www.postgresql.org/download/linux/ubuntu/
+
+2. hop on db:
+	sudo -i -u postgres
+
+3. 'psql' into cli
+
+4. In the shell, create database and other stuff
+	https://www.postgresql.org/docs/18/tutorial-createdb.html	
+	
+		{	
+		CREATE DATABASE <db_name>
+		etc ...
+		}
+ 
+
+
+In case of need '\help' gives all options
+	\c <db> = connect to database
+	\dt = show the current table structure
+	\d+ <table> = shows all columns in the table
+
+
+CREATE TABLE users (
+		   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+		   email TEXT UNIQUE NOT NULL, 
+		   name TEXT NOT NULL, 
+		   password_hash TEXT NOT NULL 
+		   );
+
