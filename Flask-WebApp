@@ -1,0 +1,19 @@
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# GET endpoint
+@app.route("/api/hello", methods=["GET"])
+def hello():
+    return jsonify({"message": "Hello, REST API!"})
+
+# POST endpoint
+@app.route("/api/echo", methods=["POST"])
+def echo():
+    data = request.json
+    return jsonify({
+        "you_sent": data
+    })
+
+if __name__ == "__main__":
+    app.run(debug=True)
